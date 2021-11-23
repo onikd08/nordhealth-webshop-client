@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 const AddProduct = () => {
 
     const history = useHistory();
-    const [image, setImage] = useState(null);
+    const [image, setImage] = useState("");
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
     const [category, setCategory] = useState("");
@@ -47,7 +47,12 @@ const AddProduct = () => {
 
                     <div className="form-group">
                         <label>Image</label>
-                        <input required type="file" className="form-control" onChange={(e) => setImage(e.target.files[0])} />
+                        <input
+                            required
+                            type="text"
+                            placeholder="Image URL"
+                            className="form-control"
+                            onChange={(e) => setImage(e.target.value)} />
                     </div>
 
                     <div className="form-group">

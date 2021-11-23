@@ -27,8 +27,8 @@ const ProductDetails = () => {
 
     return (
         <div className="container mt-5 row">
-            <div className="col col-md-6">
-                <div className="card" style={{ width: "18rem" }}>
+            <div className="col-12 col-md-8">
+                <div className="card" style={{ maxWidth: '540px' }}>
                     <img src={product.image} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>
@@ -41,9 +41,10 @@ const ProductDetails = () => {
                 </div>
             </div>
 
-            <div className="col col-md-4">
+            <div className="col-12 col-md-4">
                 <Cart cart={cart}></Cart>
             </div>
+            <br />
         </div>
     );
 };

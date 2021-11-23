@@ -13,10 +13,10 @@ const Product = (props) => {
     return (
         <div className="card mb-3" style={{ maxWidth: '540px' }}>
             <div className="row g-0">
-                <div className="col-md-4">
+                <div className="col-md-6">
                     <img src={image} className="border border-1 img-fluid rounded-start h-100" alt="..." />
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-6">
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
                         <p className="card-text">Price: {price} €</p>
