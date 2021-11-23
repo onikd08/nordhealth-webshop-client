@@ -12,12 +12,20 @@ const Home = () => {
     const [cart, setCart] = useCart(products);
 
     useEffect(() => {
+
         fetch('http://127.0.0.1:8000/api/')
             .then(res => res.json())
             .then(data => {
                 setProducts(data);
                 setDisplayProducts(data);
+            })
+            .catch((error) => {
+                alert(error)
             });
+
+
+
+
 
     }, []);
 
